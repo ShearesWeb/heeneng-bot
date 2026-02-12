@@ -60,9 +60,7 @@
     },
     {
       "any": [
-        "goon",
-        "gooning",
-        "gooner"
+        "goon"
       ],
       "image": "images/goon.jpg"
     },
