@@ -1,0 +1,99 @@
+{
+  "text_rules": [
+    {
+      "any": [
+        "naked"
+      ],
+      "reply": "Send pics NOW"
+    },
+    {
+      "any": [
+        "shower",
+        "goon",
+        "squirt"
+      ],
+      "reply": "can I join?"
+    },
+    {
+      "any": [
+        "dranks",
+        "drinks"
+      ],
+      "reply": "Recent US Surgeon General advisories and World Health Organization (WHO) studies indicate no amount of alcohol is safe for health, with consumption directly linked to increased cancer risks, including breast, liver, and colon cancer. To minimize harm, adhere to moderate consumption: max two drinks/day for men, one/day for women."
+    },
+    {
+      "any": [
+        "touch u",
+        "touch you"
+      ],
+      "reply": "not if i touch you first"
+    },
+    {
+      "any": [
+        "touch"
+      ],
+      "reply": "i will touch you now"
+    },
+    {
+      "any": [
+        "chageeluvr69",
+        "hee neng"
+      ],
+      "reply": "I will milk your father's prostate tonight"
+    },
+    {
+      "any": [
+        "cum",
+        "squirt"
+      ],
+      "reply": "I will shoot on your face"
+    }
+  ],
+  "image_rules": [
+    {
+      "any": [
+        "joy",
+        "lara",
+        "gareth"
+      ],
+      "image": "images/joy.jpg"
+    },
+    {
+      "any": [
+        "goon",
+        "gooning",
+        "gooner"
+      ],
+      "image": "images/goon.jpg"
+    },
+    {
+      "any": [
+        "backshots"
+      ],
+      "image": "images/backshot.jpg"
+    },
+    {
+      "any": [
+        "erica forehead",
+        "forehead",
+        "erigga",
+        "erigger",
+        "rigger"
+      ],
+      "image": "images/touch.jpg"
+    },
+    {
+      "any": [
+        "fat fuck"
+      ],
+      "image": "images/fat_fuck.jpg"
+    }
+  ],
+  "sticker_ids": [
+    "CAACAgUAAxkBAAMMaY3RJ976TKEDl_OS3WppF5O9aZoAAvQSAAKZdlhUpIhy9lN0x-g6BA",
+    "CAACAgUAAxkBAAMNaY3RJ74aJs3t_58MDaw9oIJgQNAAAmECAAIUM_hU_tIv5Tk2zuU6BA",
+    "CAACAgIAAxkBAAMOaY3RJ7fOej4J-WNduCtIHkpEh0wAAo4AA1erYAMKFKk97UxwCzoE",
+    "CAACAgUAAxkBAAMPaY3RJ8nG9Hu2pg-HdKMIglhx-asAAlYPAALGNwFWBS8WixZkz5g6BA",
+    "CAACAgIAAxkBAAMQaY3RJ9EDsjeU4PVLSNA_R880OYMAArgAA1erYAMbHpTGtLPCnjoE"
+  ]
+}
