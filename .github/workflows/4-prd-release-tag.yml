@@ -80,19 +80,27 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
-      - name: 4. 🏷️ Set Docker Image Tag
+      - name: 4. 🧱 Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: 5. 🏷️ Set Docker Image Tag
         id: vars
         run: echo "TAG=prd-${{ github.sha }}" >> $GITHUB_ENV
 
-      - name: 5. 🛠️ Build Docker Image
+      - name: 6. 🛠️ Build Docker Image
         run: |
-          docker build -t ${{ needs.infra-deploy-prd.outputs.ECR_REPOSITORY_URL }}:$TAG .
+          docker buildx build \
+            --platform linux/amd64 \
+            --provenance=false \
+            --load \
+            -t ${{ needs.infra-deploy-prd.outputs.ECR_REPOSITORY_URL }}:$TAG \
+            .
 
-      - name: 6. 📤 Push Docker Image to ECR
+      - name: 7. 📤 Push Docker Image to ECR
         run: |
           docker push ${{ needs.infra-deploy-prd.outputs.ECR_REPOSITORY_URL }}:$TAG
 
-      - name: 7. 🔄 Update Lambda Function with New Image
+      - name: 8. 🔄 Update Lambda Function with New Image
         run: |
           aws lambda update-function-code \
             --function-name ${{ needs.infra-deploy-prd.outputs.FUNCTION_NAME }} \
