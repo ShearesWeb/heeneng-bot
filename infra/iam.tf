@@ -9,21 +9,29 @@ module "lambda_execution_role" {
   policy_attachments = [
     "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
   ]
-  # custom_policy = {
-  #   name = local.lambda_execution_policy_name
-  #   statements = {
-  #     DynamodbPermissions = {
-  #       effect = "Allow"
-  #       actions = [
-  #         "dynamodb:PutItem",
-  #         "dynamodb:GetItem",
-  #         "dynamodb:UpdateItem",
-  #       ]
-  #       resources = [
-  #         aws_dynamodb_table.table.arn
-  #       ]
-  #     }
-  #   }
-  # }
+  custom_policy = {
+    name        = local.lambda_execution_policy_name
+    description = "Allow Lambda to read images from S3."
+    statements = {
+      ImagesBucketList = {
+        effect = "Allow"
+        actions = [
+          "s3:ListBucket"
+        ]
+        resources = [
+          aws_s3_bucket.images.arn
+        ]
+      }
+      ImagesBucketRead = {
+        effect = "Allow"
+        actions = [
+          "s3:GetObject",
+          "s3:GetObjectVersion"
+        ]
+        resources = [
+          "${aws_s3_bucket.images.arn}/*"
+        ]
+      }
+    }
+  }
 }
-
