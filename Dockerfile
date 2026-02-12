@@ -7,6 +7,7 @@ RUN pip install --no-cache-dir -r requirements.txt -t ${LAMBDA_TASK_ROOT}
 
 # Copy application code
 COPY ./src/*.py ${LAMBDA_TASK_ROOT}/
+COPY ./src/responses.json ${LAMBDA_TASK_ROOT}/
 
 # Set the Lambda handler
 CMD [ "app.handler" ]
